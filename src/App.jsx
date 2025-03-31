@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-    <h1>guess that 'mon bro</h1>
+    <h1 class="text-blue-600 dark:text-sky-400">guess that 'mon bro</h1>
     </>
   )
 }
