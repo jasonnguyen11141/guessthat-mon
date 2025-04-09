@@ -1,6 +1,11 @@
-const Home = () => {
+
+const StartButton = () => {
     return (
-    <h1>guess that 'mon</h1>
+    <div>
+      <h1>guess that 'mon</h1>
+      <p>guess pokemon and build your collection.</p>
+      <button>Start</button>
+      </div>
     );
   };
   
