@@ -1,5 +1,5 @@
 
-const StartButton = () => {
+const Home = () => {
     return (
     <div>
       <h1>guess that 'mon</h1>

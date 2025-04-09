@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-function PokemonCard() {
+function PokemonData() {
   const [pokemon, setPokemon] = useState(null);
 
   useEffect(() => {
@@ -32,4 +32,4 @@ function PokemonCard() {
   );
 }
 
-export default PokemonCard;
+export default PokemonData;
