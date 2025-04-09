@@ -5,8 +5,12 @@ import Navbar from "./components/Navbar/Navbar"
 import Play from "./pages/Play";
 import Collection from "./pages/Collection";
 import Home from "./pages/Home";
-import './App.css'
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom'
+import './App.css';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import React from 'react';
+import PokemonCard from './components/PokemonCard';
+
+
 
 function App() {
   
@@ -21,4 +25,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
