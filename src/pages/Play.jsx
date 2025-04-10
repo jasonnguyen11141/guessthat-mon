@@ -16,7 +16,7 @@ const Play = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-yellow-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-zinc-800">
       <h1 className="text-3xl font-bold mb-4">Who's that Pokémon?</h1>
 
       {pokemonImage && (
