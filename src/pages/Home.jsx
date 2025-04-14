@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-neutral-850 text-center px-4">
       <img
-        src="/ditto.png" // Replace with your actual image path
+        src="src/assets/pokeball.png" // Replace with your actual image path
         alt="guess that 'mon'"
         className="w-24 h-24 mb-6"
       />
