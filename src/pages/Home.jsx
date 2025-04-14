@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import ScrollReveal from "scrollreveal";
+import ScrollReveal from "Scrollreveal";
 
 
 export default function Home() {
