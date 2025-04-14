@@ -1,19 +1,10 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import ScrollReveal from "Scrollreveal";
+
 
 
 export default function Home() {
   const navigate = useNavigate();
-
-    useEffect(() => {
-      ScrollReveal().reveal(".reveal", {
-        delay: 200,
-        duration: 1000,
-        easing: 'ease-in-out',
-        reset: false,
-      })
-    }, [])
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-neutral-850 text-center px-4">
       <img
