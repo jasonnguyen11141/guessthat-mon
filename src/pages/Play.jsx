@@ -5,6 +5,11 @@ const Play = () => {
   const [options, setOptions] = useState([]);
   const [score, setScore] = useState(0);
   const [rewardCard, setRewardCard] = useState(null);
+  
+  // State variables for alert system
+  const [alertMessage, setAlertMessage] = useState('');
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertColor, setAlertColor] = useState('bg-green-500'); // Added state for alert color
 
   const generateRandomId = () => Math.floor(Math.random() * 898) + 1;
 
@@ -42,7 +47,19 @@ const Play = () => {
 
     if (guess === pokemon.name) {
       setScore((prev) => prev + 1);
+      setAlertMessage('Congratulations! You got it right!');
+      setAlertColor('bg-green-500'); // Set color to green for correct guess
+    } else {
+      setAlertMessage('Wrong! Try again.');
+      setAlertColor('bg-red-500'); // Set color to red for wrong guess
     }
+
+    setShowAlert(true);
+
+    // Hide the alert after 2 seconds
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 2000);
 
     fetchPokemon(); // load next round
   };
@@ -85,6 +102,12 @@ const Play = () => {
           alt="Who's that Pokémon?"
           className="w-60 h-60 object-contain mb-6"
         />
+      )}
+
+      {showAlert && (
+        <div className={`mb-4 p-2 text-white rounded ${alertColor}`}>
+          {alertMessage}
+        </div>
       )}
 
       <div className="grid grid-cols-2 gap-4">
