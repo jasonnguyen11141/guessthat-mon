@@ -6,10 +6,10 @@ const Play = () => {
   const [score, setScore] = useState(0);
   const [rewardCard, setRewardCard] = useState(null);
   
-  // State variables for alert system
+  // Alert state
   const [alertMessage, setAlertMessage] = useState('');
   const [showAlert, setShowAlert] = useState(false);
-  const [alertColor, setAlertColor] = useState('bg-green-500'); // Added state for alert color
+  const [alertColor, setAlertColor] = useState('bg-green-500'); // Default to green for correct answer
 
   const generateRandomId = () => Math.floor(Math.random() * 898) + 1;
 
@@ -20,7 +20,6 @@ const Play = () => {
     const correctName = correctData.name;
     const image = correctData.sprites.other['official-artwork'].front_default;
 
-    // Get 3 incorrect names
     const wrongNames = [];
     while (wrongNames.length < 3) {
       const wrongId = generateRandomId();
@@ -35,7 +34,6 @@ const Play = () => {
       }
     }
 
-    // Combine and shuffle options
     const allOptions = [correctName, ...wrongNames].sort(() => Math.random() - 0.5);
 
     setPokemon({ name: correctName, image });
@@ -48,28 +46,27 @@ const Play = () => {
     if (guess === pokemon.name) {
       setScore((prev) => prev + 1);
       setAlertMessage('Congratulations! You got it right!');
-      setAlertColor('bg-green-500'); // Set color to green for correct guess
+      setAlertColor('bg-green-500');
     } else {
       setAlertMessage('Wrong! Try again.');
-      setAlertColor('bg-red-500'); // Set color to red for wrong guess
+      setAlertColor('bg-red-500');
     }
 
+    // Show the alert
     setShowAlert(true);
-
-    // Hide the alert after 2 seconds
     setTimeout(() => {
       setShowAlert(false);
-    }, 2000);
+    }, 2000); // Hide alert after 2 seconds
 
-    fetchPokemon(); // load next round
+    fetchPokemon(); // Load next round
   };
 
   const fetchRewardCard = async () => {
     const randomPage = Math.floor(Math.random() * 100);
     const res = await fetch(`https://api.pokemontcg.io/v2/cards?page=${randomPage}&pageSize=1`, {
       headers: {
-        'X-Api-Key': 'c51ee1c2-071a-43a1-9b83-89d8b5fcab9c'
-      }
+        'X-Api-Key': 'your-api-key-here',
+      },
     });
     const data = await res.json();
     if (data.data && data.data.length > 0) {
@@ -78,6 +75,10 @@ const Play = () => {
         name: card.name,
         image: card.images.large || card.images.small,
       });
+      // Save the reward to localStorage
+      const savedRewards = JSON.parse(localStorage.getItem('rewards')) || [];
+      savedRewards.push(card.images.large || card.images.small);
+      localStorage.setItem('rewards', JSON.stringify(savedRewards));
     }
   };
 
@@ -87,14 +88,14 @@ const Play = () => {
 
   useEffect(() => {
     if (score > 0 && score % 3 === 0) {
-      fetchRewardCard();
+      fetchRewardCard(); // Fetch a reward every 3 correct answers
     }
   }, [score]);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <h1 className="text-3xl font-bold mb-4">Who's that Pokémon?</h1>
-      <p className="mb-2 text-lg font-medium">Score: {score}</p>
+      <h1 className="text-3xl font-bold mb-4 text-white">Who's that Pokémon?</h1>
+      <p className="mb-2 text-lg font-medium text-white">Score: {score}</p>
 
       {pokemon && (
         <img
