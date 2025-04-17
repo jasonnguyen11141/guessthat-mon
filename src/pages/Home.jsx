@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function Home() {
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-neutral-850 text-center px-4">
+    <div className="fade-in min-h-screen flex flex-col items-center justify-center bg-neutral-850 text-center px-4">
       <img
         src="src/assets/pokeball.png" // Replace with your actual image path
         alt="guess that 'mon'"
