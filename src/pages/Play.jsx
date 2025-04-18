@@ -6,7 +6,7 @@ const Play = () => {
   const [score, setScore] = useState(0);
   const [rewardCard, setRewardCard] = useState(null);
   
-  // Alert state
+  // alert state
   const [alertMessage, setAlertMessage] = useState('');
   const [showAlert, setShowAlert] = useState(false);
   const [alertColor, setAlertColor] = useState('bg-green-500'); // Default to green for correct answer
@@ -56,7 +56,7 @@ const Play = () => {
     setShowAlert(true);
     setTimeout(() => {
       setShowAlert(false);
-    }, 2000); // Hide alert after 2 seconds
+    }, 2000); // hide alert after 2 secs
 
     fetchPokemon(); // Load next round
   };
@@ -93,9 +93,9 @@ const Play = () => {
   }, [score]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <h1 className="text-3xl font-bold mb-4 text-white">Who's that Pokémon?</h1>
-      <p className="mb-2 text-lg font-medium text-white">Score: {score}</p>
+    <div className="flex flex-col items-center justify-center min-h-250 p-4">
+      <h1 className="text-3xl font-md mb-4 text-white">Who's that Pokémon?</h1>
+      <p className="mb-2 text-lg text-white mb-6">Score: {score}</p>
 
       {pokemon && (
         <img
@@ -116,7 +116,7 @@ const Play = () => {
           <button
             key={idx}
             onClick={() => handleGuess(option)}
-            className="bg-white px-4 py-2 rounded shadow hover:bg-blue-100 capitalize text-lg"
+            className="bg-white px-4 py-2 rounded-xl shadow hover:bg-blue-100 capitalize text-lg"
           >
             {option}
           </button>

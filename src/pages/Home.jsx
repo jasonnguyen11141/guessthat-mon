@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="fade-in min-h-screen flex flex-col items-center justify-center bg-neutral-850 text-center px-4">
       <img
-        src="src/assets/pokeball.png" // Replace with your actual image path
+        src="src/assets/ditto_dance.gif"
         alt="guess that 'mon'"
         className="w-24 h-24 mb-6"
       />
@@ -20,7 +20,7 @@ export default function Home() {
       </p>
       <button
         onClick={() => navigate("/play")}
-        className="bg-gray-50 text-black font-medium py-2 px-6 rounded-full">
+        className="bg-gray-50 text-black font-medium py-2 px-6 rounded-full hover:bg-blue-100">
         play
       </button>
     </div>
