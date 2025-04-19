@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import "tailwindcss";
 
-/* notes:
-current text color: pink-50, found in tailwind css 
-background: oklch(27.4% 0.006 286.033), found in index.css file
-lighter dark accent: zinc-600
-blue pop: blue-200
+/* notes (ofc up to change, this is just to find stuff and keep track):
+current text color: pink-100, found in tailwind css 
+dark text color: zinc-600
+background: oklch(27.4% 0.006 286.033), found in index.css file, aka zinc-800 in tailwind
+lighter-dark accent: zinc-600
+blue: blue-200
  */
 
 

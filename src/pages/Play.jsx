@@ -134,7 +134,7 @@ const Play = () => {
 
       {/* reward card */}
       {rewardCard && (
-        <div className="mt-10 text-center bg-white p-6 rounded-xl shadow-lg">
+        <div className="mt-10 text-center bg-zinc-600 p-6 rounded-xl shadow-lg">
           <h2 className="text-xl font-bold mb-2"> Here is your Reward!</h2>
           <img src={rewardCard.image} alt={rewardCard.name} className="w-60 mx-auto" />
           <p className="mt-2 font-semibold">{rewardCard.name}</p>
