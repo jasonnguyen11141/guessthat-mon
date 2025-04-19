@@ -93,36 +93,46 @@ const Play = () => {
   }, [score]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-250 p-4">
-      <h1 className="text-3xl font-md mb-4 text-white">Who's that Pokémon?</h1>
-      <p className="mb-2 text-lg text-white mb-6">Score: {score}</p>
+    <div className="flex flex-col items-center justify-center min-h-280 p-4">
 
+    {/* pokemon pic */}
       {pokemon && (
         <img
           src={pokemon.image}
-          alt="Who's that Pokémon?"
-          className="w-60 h-60 object-contain mb-6"
+          alt="Pokémon image"
+          className="w-90 h-auto object-contain mb-6"
         />
       )}
 
+      {/* text & alert */}
+      <p className="mb-2 text-lg text-pink-100 mb-6">Score: {score}</p>
+      <h1 className="text-3xl font-md mb-10 text-pink-100">Who's that Pokémon?</h1>
+
       {showAlert && (
-        <div className={`mb-4 p-2 text-white rounded ${alertColor}`}>
+        <div
+          className={`mb-10 p-2 text-white rounded ${alertColor}
+            transition-all duration-500 ease-in-out transform
+            animate-fade-in`}
+        >
           {alertMessage}
         </div>
       )}
 
+
+      {/* answer choices */}
       <div className="grid grid-cols-2 gap-4">
         {options.map((option, idx) => (
           <button
             key={idx}
             onClick={() => handleGuess(option)}
-            className="bg-white px-4 py-2 rounded-xl shadow hover:bg-blue-100 capitalize text-lg"
+            className="bg-zinc-600 text-pink-100 px-4 py-2 rounded-xl shadow hover:bg-blue-200 hover:text-zinc-600 capitalize text-lg"
           >
             {option}
           </button>
         ))}
       </div>
 
+      {/* reward card */}
       {rewardCard && (
         <div className="mt-10 text-center bg-white p-6 rounded-xl shadow-lg">
           <h2 className="text-xl font-bold mb-2"> Here is your Reward!</h2>

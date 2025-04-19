@@ -1,28 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import "tailwindcss";
 
+/* notes:
+current text color: pink-50, found in tailwind css 
+background: oklch(27.4% 0.006 286.033), found in index.css file
+lighter dark accent: zinc-600
+blue pop: blue-200
+ */
+
+
 :root {
   font-family: "Rubik", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   
   color-scheme: light dark;
   /* color: rgba(255, 255, 255, 0.87); */
-  background-color: #242424;
+  background-color: oklch(27.4% 0.006 286.033);
   
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0 auto;
+  max-width: 1280px;
+  min-width: 320px;
+
+
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
 }
 
 
-body {
-  min-width: 320px;
-  /* min-height: 100vh; */
+/* body {
+  min-height: 100vh;
   margin: 0;
   color: #4e4646;
-  /* background: linear-gradient(135deg, #1a202c, #3a1010); */
-}
+  background: linear-gradient(135deg, #1a202c, #3a1010);
+} */
 
 h1 {
   line-height: 1.1;
@@ -65,14 +92,14 @@ button:focus-visible {
 } */
 
 button:disabled {
-  background-color: #3a3a3a;
+  /* background-color: #3a3a3a; */
   cursor: not-allowed;
   /* box-shadow: none; */
 }
 
-h1, p {
-  color: #fff;
-}
+/* h1, p {
+  color: oklch(96.7% 0.001 286.375);
+} */
 /* 
 p {
   font-size: 1.25rem;
