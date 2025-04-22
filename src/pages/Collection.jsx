@@ -17,7 +17,7 @@ const Collection = () => {
       ) : (
         <div className="grid grid-cols-3 gap-6">
           {rewards.map((reward, index) => (
-            <div key={index} className="bg-white p-4 rounded-lg shadow-md">
+            <div key={index} className="bg-zinc-600 p-4 rounded-xl shadow-lg">
               <img src={reward} alt={`Reward ${index}`} className="w-48 h-48 object-contain mx-auto" />
             </div>
           ))}
@@ -28,3 +28,4 @@ const Collection = () => {
 };
 
 export default Collection;
+
