@@ -19,27 +19,27 @@ const Collection = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <h1 className="text-3xl font-bold mb-4 text-white">Your Collection</h1>
-
       {rewards.length === 0 ? (
-        <p className="text-lg text-white">You haven't earned any rewards yet!</p>
+        <p className="text-lg text-pink-100">You haven't earned any rewards yet!</p>
       ) : (
-        <div className="grid grid-cols-3 gap-6">
+        <div className="mt-10 grid grid-cols-3 gap-8">
           {rewards.map((reward, index) => (
             <div
               key={index}
-              className="bg-zinc-600 p-4 rounded-xl shadow-lg cursor-pointer transition-transform hover:scale-105"
+              className="bg-zinc-600 p-2 rounded-xl shadow-lg cursor-pointer transition-transform hover:scale-105"
               onClick={() => handleCardClick(reward)}
             >
               <img
                 src={reward}
                 alt={`Reward ${index}`}
-                className="w-48 h-48 object-contain mx-auto"
+                className="w-65 h-auto object-contain mx-auto"
               />
             </div>
           ))}
         </div>
       )}
+
+      <h1 className="text-m mt-20 font-md text-pink-100">end of collection</h1>
 
       {selectedReward && (
         <div

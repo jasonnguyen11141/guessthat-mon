@@ -12,11 +12,14 @@ export default function Home() {
         alt="guess that 'mon'"
         className="w-24 h-24 mb-6"
       />
-      <h1 className="text-3xl md:text-4xl font-bold mb-2 text-pink-50 ">
+      <h1 className="text-3xl md:text-4xl font-bold mb-5 text-pink-100 ">
         guess that ‘mon
       </h1>
-      <p className="text-neutral-50 mb-6 text-pink-50">
+      <p className="text-neutral-50 text-pink-100">
         guess pokémon and build your collection.
+      </p>
+      <p className="text-neutral-50 mb-6 text-pink-100">
+      win a card every 3 correct guesses!
       </p>
       <button
         onClick={() => navigate("/play")}

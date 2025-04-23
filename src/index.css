@@ -15,9 +15,7 @@ blue: blue-200
   line-height: 1.5;
   
   color-scheme: light dark;
-  /* color: rgba(255, 255, 255, 0.87); */
-  background-color: oklch(27.4% 0.006 286.033);
-  
+  background-color: oklch(27.4% 0.006 286.033);  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -44,94 +42,24 @@ blue: blue-200
   animation: fade-in 0.4s ease-out forwards;
 }
 
-
-/* body {
-  min-height: 100vh;
-  margin: 0;
-  color: #4e4646;
-  background: linear-gradient(135deg, #1a202c, #3a1010);
-} */
-
 h1 {
   line-height: 1.1;
-  /* font-size: 2rem;
-  font-weight: 700; */
-  /* text-align: center; */
-  /* margin-bottom: 2rem; */
-  /* color: #fff; */
 }
 
 button {
-  /* border-radius: 12px; */
-  /* border: 2px solid transparent; */
-  /* padding: 0.8em 1.5em;
-  font-size: 1.1em;
-  font-weight: 600; */
-  /* font-family: inherit; */
-  /* background-color: #832424; */
-  /* color: #fff; */
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 button:hover {
-  /* background-color: #991a1a;
-  border-color: #646cff; */
   transform: scale(1.05);
 }
 
 button:active {
-  /* background-color: #751111; */
   transform: scale(1);
 }
 
-/* button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-  box-shadow: 0 0 0 2px #646cff;
-} */
-
 button:disabled {
-  /* background-color: #3a3a3a; */
   cursor: not-allowed;
-  /* box-shadow: none; */
-}
-
-/* h1, p {
-  color: oklch(96.7% 0.001 286.375);
-} */
-/* 
-p {
-  font-size: 1.25rem;
-  font-weight: 500;
-  text-align: center;
-} */
-
-.grid-container {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  margin: 2rem 0;
-}
-
-img {
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-img:hover {
-  transform: scale(1.05);
-  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
-}
-
-.alert {
-  padding: 1em;
-  color: #fff;
-  border-radius: 10px;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
 }
 
