@@ -100,23 +100,24 @@ const Play = () => {
         <img
           src={pokemon.image}
           alt="Pokémon image"
-          className="w-90 h-auto object-contain mb-6"
+          className="w-90 h-auto object-contain mb-10"
         />
       )}
 
       {/* text & alert */}
-      <p className="mb-2 text-lg text-pink-100 mb-6">Score: {score}</p>
-      <h1 className="text-3xl font-md mb-10 text-pink-100">Who's that Pokémon?</h1>
-
       {showAlert && (
         <div
-          className={`mb-10 p-2 text-white rounded ${alertColor}
+          className={`mb-2 p-2 text-white rounded z-2 ${alertColor}
             transition-all duration-500 ease-in-out transform
             animate-fade-in`}
         >
           {alertMessage}
         </div>
       )}
+      <p className="mb-2 text-lg text-pink-100 mb-6">Score: {score}</p>
+      <h1 className="text-3xl font-md mb-10 text-pink-100">Who's that Pokémon?</h1>
+
+
 
 
       {/* answer choices */}
