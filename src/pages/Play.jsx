@@ -100,7 +100,7 @@ const Play = () => {
         <img
           src={pokemon.image}
           alt="Pokémon image"
-          className="w-90 h-auto object-contain mb-10"
+          className="w-90 h-auto object-contain mb-6"
         />
       )}
 
