@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="fade-in min-h-screen flex flex-col items-center justify-center bg-neutral-850 text-center px-4">
       <img
-        src="/public/ditto_dance.gif"
+        src="/ditto_dance.gif"
         alt="guess that 'mon'"
         className="w-24 h-24 mb-6"
       />

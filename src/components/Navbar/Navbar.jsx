@@ -19,7 +19,7 @@ const Navbar = ({
       <div className="flex items-center gap-x-2 basis-1/4">
       <h1 className="text-4xl whitespace-nowrap font-medium text-pink-100">{title}</h1>
       <img
-          src="/public/sparkles.png"
+          src="/sparkles.png"
           alt="guess that 'mon logo"
           className="ml-2 w-10 h-auto"
         />
